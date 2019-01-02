@@ -32,5 +32,7 @@ public class DataLoader implements CommandLineRunner {
         rec2.setRecipe("recipe 3");
 
         recService.save(rec2);
+
+        System.out.println("loaded recipes...");
     }
 }
