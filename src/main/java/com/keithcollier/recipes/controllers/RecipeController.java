@@ -17,7 +17,8 @@ public class RecipeController {
     @RequestMapping({"","/","index"})
     public String listRecipes(Model model){
 
+        System.out.println("recipe index html loaded...");
         model.addAttribute("rec", recService.findAll());
-        return "index";
+        return "index" ;
     }
 }
