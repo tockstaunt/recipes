@@ -9,21 +9,33 @@
 <div class="container" align="center">
     <h1>Recipe List</h1>
 
-    <table class="col-md-6" align="center">
+    <table align="center">
         <thead>
         <tr>
             <th>#</th>
             <th>Recipe</th>
+            <th>Prep Time</th>
+            <th>Cook Time</th>
+            <th>directions</th>
+            <th>difficulty</th>
+            <th>notes</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="rec : ${rec}">
             <td th:text="${rec.id}">..</td>
-            <td th:text="${rec.recipe}">..</td>
+            <td th:text="${rec.description}">..</td>
+            <td th:text="${rec.prepTime}">..</td>
+            <td th:text="${rec.cookTime}">..</td>
+            <td th:text="${rec.directions}">..</td>
+            <td th:text="${rec.difficulty.toString()}">..</td>
+            <td th:text="${rec.notes.recipeNotes}">..</td>
+
         </tr>
         </tbody>
 
     </table>
+
 </div>
 
 </body>

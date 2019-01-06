@@ -1,6 +1,7 @@
 package com.keithcollier.recipes.domain;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -13,13 +14,16 @@ public class Recipe {
     private String description;
     private Integer prepTime;
     private Integer cookTime;
-    private Integer servings;
+    private Integer servingsMin;
+    private Integer servingsMax;
     private String source;
     private String url;
+
+    @Lob
     private String directions;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
-    private Set<Ingredient> ingredients;
+    private Set<Ingredient> ingredients = new HashSet<>();
 
     @Lob
     private Byte[] image;
@@ -33,7 +37,7 @@ public class Recipe {
     @ManyToMany
     @JoinTable(name = "recipe_category",
     joinColumns = @JoinColumn(name = "recipe_id"), inverseJoinColumns = @JoinColumn(name = "category_id"))
-    private Set<Category> categories;
+    private Set<Category> categories = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -67,12 +71,20 @@ public class Recipe {
         this.cookTime = cookTime;
     }
 
-    public Integer getServings() {
-        return servings;
+    public Integer getServingsMin() {
+        return servingsMin;
     }
 
-    public void setServings(Integer servings) {
-        this.servings = servings;
+    public void setServingsMin(Integer servingsMin) {
+        this.servingsMin = servingsMin;
+    }
+
+    public Integer getServingsMax() {
+        return servingsMax;
+    }
+
+    public void setServingsMax(Integer servingsMax) {
+        this.servingsMax = servingsMax;
     }
 
     public String getSource() {
