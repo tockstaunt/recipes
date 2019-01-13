@@ -130,16 +130,15 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
 
         Notes guacNotes = new Notes();
         guacNotes.setRecipeNotes("Be careful handling chiles if using. Wash your hands thoroughly after handling and do not touch your eyes or the area near your eyes with your hands for several hours.");
-        guacNotes.setRecipe(guacRecipe);
         guacRecipe.setNotes(guacNotes);
 
-        guacRecipe.getIngredients().add(new Ingredient("Ripe Avocados",new BigDecimal(2),eachUOM,guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("Salt",new BigDecimal(.5),teaSpoonUOM,guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("limon or lime juice",new BigDecimal(2),tableSpoonUOM,guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("minced red onion",new BigDecimal(2),tableSpoonUOM,guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("Cilantro",new BigDecimal(2),tableSpoonUOM,guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("black pepper",new BigDecimal(.5),dashUOM,guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("ripe tomato",new BigDecimal(0.5),eachUOM,guacRecipe));
+        guacRecipe.getIngredients().add(new Ingredient("Ripe Avocados",new BigDecimal(2),eachUOM));
+        guacRecipe.getIngredients().add(new Ingredient("Salt",new BigDecimal(.5),teaSpoonUOM));
+        guacRecipe.getIngredients().add(new Ingredient("limon or lime juice",new BigDecimal(2),tableSpoonUOM));
+        guacRecipe.getIngredients().add(new Ingredient("minced red onion",new BigDecimal(2),tableSpoonUOM));
+        guacRecipe.getIngredients().add(new Ingredient("Cilantro",new BigDecimal(2),tableSpoonUOM));
+        guacRecipe.getIngredients().add(new Ingredient("black pepper",new BigDecimal(.5),dashUOM));
+        guacRecipe.getIngredients().add(new Ingredient("ripe tomato",new BigDecimal(0.5),eachUOM));
 
         guacRecipe.getCategories().add(americanCategory);
         guacRecipe.getCategories().add(mexocanCategory);
@@ -168,21 +167,21 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
 
         Notes tacoNotes = new Notes();
         tacoNotes.setRecipeNotes("Look for ancho chile powder with the Mexican ingredients at your grocery store, on buy it online. (If you can't find ancho chili powder, you replace the ancho chili, the oregano, and the cumin with 2 1/2 tablespoons regular chili powder, though the flavor won't be quite the same.)");
-        tacoNotes.setRecipe(tacoRecipe);
+
 
         tacoRecipe.setNotes(tacoNotes);
 
 
-        tacoRecipe.getIngredients().add(new Ingredient("ancho chili powder",new BigDecimal(2),tableSpoonUOM,tacoRecipe));
-        tacoRecipe.getIngredients().add(new Ingredient("Dried oregano",new BigDecimal(1),teaSpoonUOM,tacoRecipe));
-        tacoRecipe.getIngredients().add(new Ingredient("dried cumin",new BigDecimal(1),teaSpoonUOM,tacoRecipe));
-        tacoRecipe.getIngredients().add(new Ingredient("sugar",new BigDecimal(1),teaSpoonUOM,tacoRecipe));
-        tacoRecipe.getIngredients().add(new Ingredient("salt",new BigDecimal(.5),teaSpoonUOM,tacoRecipe));
-        tacoRecipe.getIngredients().add(new Ingredient("clove garlic, finely chopped",new BigDecimal(1),eachUOM,tacoRecipe));
-        tacoRecipe.getIngredients().add(new Ingredient("finely grated orange zest",new BigDecimal(1),tableSpoonUOM,tacoRecipe));
-        tacoRecipe.getIngredients().add(new Ingredient("fresh-squeezed orange juice",new BigDecimal(3),tableSpoonUOM,tacoRecipe));
-        tacoRecipe.getIngredients().add(new Ingredient("olive oil",new BigDecimal(2),tableSpoonUOM,tacoRecipe));
-        tacoRecipe.getIngredients().add(new Ingredient("boneless chicken thighs (1 1/4 pounds)",new BigDecimal(4),eachUOM,tacoRecipe));
+        tacoRecipe.getIngredients().add(new Ingredient("ancho chili powder",new BigDecimal(2),tableSpoonUOM));
+        tacoRecipe.getIngredients().add(new Ingredient("Dried oregano",new BigDecimal(1),teaSpoonUOM));
+        tacoRecipe.getIngredients().add(new Ingredient("dried cumin",new BigDecimal(1),teaSpoonUOM));
+        tacoRecipe.getIngredients().add(new Ingredient("sugar",new BigDecimal(1),teaSpoonUOM));
+        tacoRecipe.getIngredients().add(new Ingredient("salt",new BigDecimal(.5),teaSpoonUOM));
+        tacoRecipe.getIngredients().add(new Ingredient("clove garlic, finely chopped",new BigDecimal(1),eachUOM));
+        tacoRecipe.getIngredients().add(new Ingredient("finely grated orange zest",new BigDecimal(1),tableSpoonUOM));
+        tacoRecipe.getIngredients().add(new Ingredient("fresh-squeezed orange juice",new BigDecimal(3),tableSpoonUOM));
+        tacoRecipe.getIngredients().add(new Ingredient("olive oil",new BigDecimal(2),tableSpoonUOM));
+        tacoRecipe.getIngredients().add(new Ingredient("boneless chicken thighs (1 1/4 pounds)",new BigDecimal(4),eachUOM));
 
         tacoRecipe.getCategories().add(americanCategory);
         tacoRecipe.getCategories().add(mexocanCategory);
