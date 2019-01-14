@@ -2,40 +2,50 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Recipes</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-</head>
+    <title>Recipes</title></head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 <body>
-<div class="container" align="center">
-    <h1>Recipe List</h1>
+<div class="container-fluid" style="margin-top: 20px">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Recipe List</h1>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive" th:if="${not #lists.isEmpty(rec)}">
+                        <table class="table table-hover ">
+                            <thead class="thead-inverse">
+                            <tr>
+                                <th>#</th>
+                                <th>Recipe</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="rec : ${rec}">
+                                <td th:text="${rec.id}">..</td>
+                                <td th:text="${rec.description}">..</td>
 
-    <table align="center">
-        <thead>
-        <tr>
-            <th>#</th>
-            <th>Recipe</th>
-            <th>Prep Time</th>
-            <th>Cook Time</th>
-            <th>directions</th>
-            <th>difficulty</th>
-            <th>notes</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="rec : ${rec}">
-            <td th:text="${rec.id}">..</td>
-            <td th:text="${rec.description}">..</td>
-            <td th:text="${rec.prepTime}">..</td>
-            <td th:text="${rec.cookTime}">..</td>
-            <td th:text="${rec.directions}">..</td>
-            <td th:text="${rec.difficulty.toString()}">..</td>
-            <td th:text="${rec.notes.recipeNotes}">..</td>
+                            </tr>
+                            </tbody>
 
-        </tr>
-        </tbody>
+                        </table>
+                    </div>
 
-    </table>
+                </div>
 
+            </div>
+
+        </div>
+
+    </div>
 </div>
 
 </body>
