@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public class UnitOfMeasureRepoTest {
+public class UnitOfMeasureRepoTestIT {
 
     @Autowired
     UnitOfMeasureRepo unitOfMeasureRepo;
@@ -26,7 +26,7 @@ public class UnitOfMeasureRepoTest {
     }
 
     @Test
-    public void findByDescription() throws  Exception{
+    public void findByDescriptionTeaspoon() throws  Exception{
 
         Optional<UnitOfMeasure> unit = unitOfMeasureRepo.findByDescription("Teaspoon");
         assertEquals("Teaspoon", unit.get().getDescription());
